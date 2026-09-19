@@ -1,9 +1,9 @@
-BudgetWise – Personal Finance Data Analysis
-Project Overview
+*BudgetWise – Personal Finance Data Analysis*
+*Project Overview*
 BudgetWise is a personal finance data analysis project created using Excel.
 The project focuses on cleaning raw transaction data, fixing inconsistent values, checking data quality, identifying suspicious transactions, and creating useful PivotTables, DAX measures, and a dashboard.
 The final dashboard helps understand transactions, income, spending, payment methods, and locations.
-Project Objectives
+*Project Objectives*
 - Clean and organize raw financial transaction data
 - Handle missing and inconsistent values
 - Standardize categories, payment modes, and locations
@@ -12,14 +12,13 @@ Project Objectives
 - Create PivotTables for analysis
 - Create Power Pivot / DAX measures
 - Build an interactive Excel dashboard
-
-Project Files
+*Project Files*
 | File | Description |
 |---|---|
 | `BudgetWise_Finance.xlsx` | Final Excel workbook containing cleaned data, PivotTables, DAX measures and Dashboard |
 | `budgetwise_finance_dataset.csv` | Original raw transaction dataset |
 | `BudgetWise_Finance_Complete_Guide_Updated.pdf` | Complete project guide and workflow |
-Dataset
+*Dataset*
 The dataset contains personal finance transactions with fields such as:
 - Transaction ID
 - User ID
@@ -31,7 +30,7 @@ The dataset contains personal finance transactions with fields such as:
 - Location
 - Notes
 The raw data contains different date formats, inconsistent category names, payment mode variations, missing values, and currency symbols.
-Data Cleaning Process
+*Data Cleaning Process*
 The following steps were performed:
 1. Kept the original Raw Data unchanged.
 2. Created lookup tables for:
@@ -47,27 +46,38 @@ The following steps were performed:
 9. Checked for manual cleaning flags.
 10. Moved suspicious negative amounts to a separate Outliers sheet for review.
 11. Copied the final cleaned data as values into `Clean_Data`.
-Quality Checks
+*Quality Checks*
 After cleaning:
 - Check Manually Flags = **0**
 - Unique Payment Modes = **4**
 - Unique Locations = **11**
 - Cleaned data was checked before analysis.
 - Suspicious negative amounts were documented instead of being deleted.
-Analysis
+*Analysis*
 PivotTables were created using the cleaned data.
-Category Analysis
+*Category Analysis*
 Shows the number of transactions by category.
-Payment Mode Analysis
+*Payment Mode Analysis*
 Shows transactions by payment method such as:
 - UPI
 - Card
 - Cash
 - Bank Transfer
-Location Analysis
+*Location Analysis*
 Shows the number of transactions by location
-Power Pivot / DAX
+*Power Pivot / DAX*
 Power Pivot was used to create measures for the dashboard.
-Total Amount
+*Total Amount*
 text
 SUMX(Table1, IFERROR(VALUE(Table1[amount]), 0))
+*Tools Used*
+Microsoft Excel
+Excel PivotTables
+Power Pivot
+DAX
+Lookup Tables
+Data Cleaning
+Data Quality Checks
+GitHub
+*Overview*
+BudgetWise demonstrates a complete Excel-based data analysis workflow, starting from raw financial transaction data and ending with a cleaned dataset, analytical summaries, DAX measures, and a dashboard for easier understanding of financial data.
